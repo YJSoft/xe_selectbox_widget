@@ -1,4 +1,4 @@
-xe_selectbox_widget
+Selectbox Sitemap Widget
 ===================
 
-XE Selectbox Sitemap Widget Skin
+XE Selectbox Sitemap Widget
