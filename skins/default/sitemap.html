@@ -1,12 +1,12 @@
-<!--@if($widget_info->sitemap_widget_colorset == 'blue')--><!--@else--><script type="text/javascript">
-function NavigateSiteMap(){
-    var selectVar = document.getElementById("sitemapWidgetBox");
+<!--@if($widget_info->sitemap_widget_movetype == 'button')--><script type="text/javascript">
+function NavigateSiteMap(widgetId){
+    var selectVar = document.getElementById(widgetId);
     var selectedVal = selectVar.options[selectVar.selectedIndex].value;
 
     window.location.href = selectedVal;
 }
 </script><!--@end-->
-<select id="sitemapWidgetBox" name="sitemapWidgetBox"<!--@if($widget_info->sitemap_widget_colorset == 'blue')--> onchange="window.location.href=this.value;"<!--@else--><!--@end-->>
+<select id="{$widget_info->widget_id}" class="{$widget_info->select_class}"<!--@if($widget_info->sitemap_widget_movetype == 'instant')--> onchange="window.location.href=this.value;"<!--@end-->>
 <option value="#" selected>{$widget_info->selectbox_default}</option>
 <!--@foreach($widget_info->sitemap_widget_menu->list as $k1 => $v1)-->
  <!--@if($v1['link'])--><!--// 1차메뉴가 있으면 -->
@@ -50,5 +50,5 @@ function NavigateSiteMap(){
  <!--@end-->
 <!--@end-->
 </select>
-<!--@if($widget_info->sitemap_widget_colorset == 'blue')--><!--@else--><button type="button" class="btn" onclick="NavigateSiteMap()">이동</button><!--@end-->
-<!-- Selectbox Sitemap Widget Ver. by YJSoft(yjsoft@yjsoft.pe.kr) -->
+<!--@if($widget_info->sitemap_widget_movetype == 'button')--><button type="button" class="{$widget_info->button_class}" onclick="NavigateSiteMap('{$widget_info->widget_id}')">{$widget_info->button_label}</button><!--@end-->
+<!-- Selectbox Sitemap Widget by YJSoft(yjsoft@yjsoft.xyz) -->

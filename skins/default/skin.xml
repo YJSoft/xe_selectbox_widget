@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skin version="0.2">
-    <title xml:lang="ko">Sitemap 위젯 Selectbox 스킨</title>
-    <description xml:lang="ko">사이트맵을 Selectbox+버튼의 형식으로 출력합니다.</description>
-    <version>0.3.3</version>
-    <date>2013-01-24</date>
-    <link>http://yjsoft.pe.kr</link>
+    <title xml:lang="ko">기본 스킨</title>
+    <description xml:lang="ko">기본 Selectbox만 사용하는 스킨입니다.</description>
+    <version>0.5.0</version>
+    <date>2025-03-02</date>
+    <link>https://yjsoft.xyz</link>
 
-    <author email_address="yjsoft@yjsoft.pe.kr" link="http://yjsoft.pe.kr">
+    <author email_address="yjsoft@yjsoft.xyz" link="https://yjsoft.xyz">
         <name xml:lang="ko">YJSoft</name>
     </author>
     

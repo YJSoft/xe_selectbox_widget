@@ -2,15 +2,15 @@
 <widget version="0.2">
     <title xml:lang="ko">Selectbox Sitemap 위젯</title>
     <description xml:lang="ko">Selectbox로 사이트맵을 출력해 줍니다.</description>
-    <version>0.1.0</version>
-    <date>2014-08-14</date>
+    <version>0.5.0</version>
+    <date>2025-03-02</date>
 
-    <author email_address="yjsoft@yjsoft.pe.kr" link="http://yjsoft.pe.kr/">
+    <author email_address="yjsoft@yjsoft.xyz" link="https://yjsoft.xyz/">
         <name xml:lang="ko">YJSoft</name>
     </author>
     <extra_vars>
         <group>
-	        <title xml:lang="ko">기본설정</title>
+	        <title xml:lang="ko">기본 설정</title>
 	        <var id="sitemap_widget_menu">
 	            <type>menu</type>
 	            <name xml:lang="ko">메뉴</name>
@@ -19,25 +19,45 @@
 	            	선택하지 않으면 사이트맵을 생성하지 않습니다.
 				</description>
 	        </var>
-			<var id="sitemap_widget_colorset" type="select">
+			<var id="sitemap_widget_movetype" type="select">
 	            <name xml:lang="ko">타입</name>
 	            <description xml:lang="ko">이동 방식을 설정해 주세요</description>
 	            <options>
-	                <value>black</value>
+	                <value>button</value>
 	                <name xml:lang="ko">이동 버튼</name>
 	            </options>
 	            <options>
-	                <value>blue</value>
+	                <value>instant</value>
 	                <name xml:lang="ko">즉시 이동</name>
 	            </options>
 	        </var>
 		</group>
 		<group>
-	        <title xml:lang="ko">추가설정</title>
+	        <title xml:lang="ko">추가 설정</title>
 	        <var id="selectbox_default">
 	            <type>text</type>
 	            <name xml:lang="ko">기본 문자열</name>
-	            <description xml:lang="ko">아무것도 선택하지 않았을시 출력되는 기본 선택 문자열을 결정합니다</description>
+	            <description xml:lang="ko">아무것도 선택하지 않았을시 출력되는 기본 선택 문자열을 결정합니다.<br/>기본값은 "선택"입니다.</description>
+        	</var>
+			<var id="button_label">
+	            <type>text</type>
+	            <name xml:lang="ko">버튼 라벨</name>
+	            <description xml:lang="ko">이동 버튼 사용시 버튼에 들어가는 라벨을 수동으로 지정할 수 있습니다.<br/>기본값은 "이동"입니다.</description>
+        	</var>
+			<var id="widget_id">
+	            <type>text</type>
+	            <name xml:lang="ko">위젯 ID</name>
+	            <description xml:lang="ko">한 페이지에 같은 위젯을 여러개 추가하는 경우 충돌을 막기 위해 ID를 수동으로 지정할 수 있습니다.<br/>기본값은 sitemapWidgetBox입니다.</description>
+        	</var>
+			<var id="select_class">
+	            <type>text</type>
+	            <name xml:lang="ko">Selectbox class</name>
+	            <description xml:lang="ko">Selectbox class를 수동으로 지정할 수 있습니다.<br/>기본값은 없습니다.</description>
+        	</var>
+			<var id="button_class">
+	            <type>text</type>
+	            <name xml:lang="ko">버튼 class</name>
+	            <description xml:lang="ko">이동 버튼 타입 사용시 버튼 class를 수동으로 지정할 수 있습니다.<br/>기본값은 btn입니다.</description>
         	</var>
         	</group>
     </extra_vars>
