@@ -19,28 +19,28 @@ function NavigateSiteMap(widgetId){
 <option value="#" selected{$disable_opt}>{$widget_info->selectbox_default}</option>
 <!--@foreach($widget_info->sitemap_widget_menu->list as $k1 => $v1)-->
  <!--@if($v1['link'])--><!--// 1차메뉴가 있으면 -->
-  <option value="{$v1['href']}"<!--@if($v1['link'] == "#")-->{$disable_opt}<!--@end-->>{$v1['text']}</option>
+  <option value="{$v1['href']}"<!--@if($v1['href'] == "#")-->{$disable_opt}<!--@end-->>{$v1['text']}</option>
   <!--@if($v1['list'])--><!--// 2차메뉴가 있으면 -->
    <!--@foreach($v1['list'] as $k2 => $v2)-->
     <!--@if($v1['link'])--><!--// 2차메뉴 -->
      <!--@if($v2['href']=="http://dropdown-header" || $v2['href']=="dropdown-header")--><!--@else-->
-     <option value="{$v2['href']}"<!--@if($v2['link'] == "#")-->{$disable_opt}<!--@end-->>- {$v2['text']}</option><!--@end-->
+     <option value="{$v2['href']}"<!--@if($v2['href'] == "#")-->{$disable_opt}<!--@end-->>- {$v2['text']}</option><!--@end-->
      <!--@if($v2['list'])--><!--// 3차메뉴가 있으면 -->
       <!--@foreach($v2['list'] as $k3 => $v3)-->
        <!--@if($v3['link'])--><!--// 3차메뉴 -->
-        <option value="{$v3['href']}"<!--@if($v3['link'] == "#")-->{$disable_opt}<!--@end-->>- - {$v3['text']}</option>
+        <option value="{$v3['href']}"<!--@if($v3['href'] == "#")-->{$disable_opt}<!--@end-->>- - {$v3['text']}</option>
         <!--@if($v3['list'])--><!--// 4차메뉴가 있으면 -->
          <!--@foreach($v3['list'] as $k4 => $v4)-->
           <!--@if($v4['text'])--><!--// 4차메뉴 -->
-           <option value="{$v4['href']}"<!--@if($v4['link'] == "#")-->{$disable_opt}<!--@end-->>- - - {$v4['text']}</option>
+           <option value="{$v4['href']}"<!--@if($v4['href'] == "#")-->{$disable_opt}<!--@end-->>- - - {$v4['text']}</option>
            <!--@if($v4['list'])--><!--// 5차메뉴가 있으면 -->
             <!--@foreach($v4['list'] as $k5 => $v5)-->
              <!--@if($v5['text'])--><!--// 5차메뉴 -->
-              <option value="{$v5['href']}"<!--@if($v5['link'] == "#")-->{$disable_opt}<!--@end-->>- - - - {$v5['text']}</option>
+              <option value="{$v5['href']}"<!--@if($v5['href'] == "#")-->{$disable_opt}<!--@end-->>- - - - {$v5['text']}</option>
               <!--@if($v5['list'])--><!--// 6차메뉴가 있으면 -->
                <!--@foreach($v5['list'] as $k6 => $v6)-->
                 <!--@if($v6['text'])--><!--// 6차메뉴 -->
-                 <option value="{$v6['href']}"<!--@if($v6['link'] == "#")-->{$disable_opt}<!--@end-->>- - - - - {$v6['text']}</option>
+                 <option value="{$v6['href']}"<!--@if($v6['href'] == "#")-->{$disable_opt}<!--@end-->>- - - - - {$v6['text']}</option>
                 <!--@end-->
                <!--@end-->
               <!--@end-->
